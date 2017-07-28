@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet"> 
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <input type="text" placeholder="Enter an activity.." id="textField">
+            <button id="addIcon" onClick="addList();" title="Add List"><img src="images/plus-icon.png" alt="icon"></button>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <section>
+        <div class="icon-wrapper">
+
+            <i class="fa fa-trash-o icons" title="Delete whole list" aria-hidden="true" id="deleteIcon" onClick="deleteList()"></i>
+        </div>
+        <div class="container">
+            <h2 id="incomplete-tasks"></h2>
+            <ol id="ulist">
+
+            </ol>
+        </div>
+        <div class="container2">
+            <h2 id="complete-tasks"></h2>
+            <ol id="new-one">
+
+            </ol>
+        </div>
+
+    </section>
+
+
+    <script src="app.js">
+
+    </script>
+</body>
+
+</html>
