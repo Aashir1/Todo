@@ -1,15 +1,24 @@
+
+
 function addList() {
-    var textFieldValue = document.getElementById('textField').value,
+
+    var textFieldValue = document.getElementById('textField').value;
         grandParent = document.getElementById('ulist'),
         listItem = document.createElement('li'),
         listInnertextField = document.createElement('input'),
         buttonDiv = document.createElement('div'),
-        imageChild = document.createElement('img')
-    tickImage = document.createElement('i')
-    heading = document.getElementById('incomplete-tasks'),
+        imageChild = document.createElement('img'),
+        tickImage = document.createElement('i'),
+        updateIcon = document.createElement('i'),
+        heading = document.getElementById('incomplete-tasks'),
         tempText = "";
-    console.log(listItem.children)
-    tickImage.setAttribute('class', 'fa fa-check invert');
+        
+    // textFieldValue = textFieldValue.value;
+    console.log(listItem.children);
+    updateIcon.setAttribute('class', 'fa fa-pencil-square-o update');
+    updateIcon.setAttribute('aria-hidden', 'true');
+    updateIcon.setAttribute('onClick','updateTodo(this.parentNode);');//here man here
+    tickImage.setAttribute('class', 'fa fa-check invert ');
     tickImage.setAttribute('aria-hidden', 'true');
     imageChild.setAttribute('src', 'images/dicon.png');
     imageChild.setAttribute('class', 'image');
@@ -27,8 +36,10 @@ function addList() {
         alert("Please enter any task");
     }
     else {
+        buttonDiv.appendChild(updateIcon);
         buttonDiv.appendChild(tickImage);
         buttonDiv.appendChild(imageChild);
+        
         listItem.appendChild(buttonDiv);
         listItem.appendChild(listInnertextField);
         grandParent.appendChild(listItem);
@@ -133,4 +144,24 @@ function deleteList() {
     parent2.innerHTML = "";
     heading1.innerHTML = "";
     heading2.innerHTML = "";
+}
+ var tempvariable;
+ var textField
+function updateTodo(parentNd){
+
+    var updateBtn = document.getElementById('update-btn')
+   textField = document.getElementById('textField');
+    tempvariable = parentNd;
+    textField.value = parentNd.nextSibling.value;
+    updateBtn.style.visibility = "visible";
+    updateBtn.setAttribute('onClick', 'update()')
+    
+    
+}
+
+function update(){
+    console.log(tempvariable.nextSibling);
+    tempvariable.nextSibling.value = textField.value;
+    textField.value = "";
+    document.getElementById('update-btn').style.visibility = "hidden";
 }

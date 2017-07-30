@@ -1,0 +1,244 @@
+body{
+    background: #eff0f3;
+}
+
+body, input, button{
+    font-family:'Roboto',sans-serif;
+}
+header{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    left: 0px;
+    /* padding: 15px 15px 0px 1%; */
+    /* padding-right: 15px; */
+    top: 0px;
+    z-index: 10;
+    background: #25b99a;
+    box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+header>div{
+    overflow: hidden;
+    max-width: 98%;
+    margin: 15px 15px 0px 15px;
+}
+header>div>input[type = "text"]{
+         width: 98%;
+    height: 50px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    padding-left: 1%;
+    padding-right: 1%;
+    background: rgba(255, 255, 255, 0.2);
+    float: left;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: none;
+    margin-right: 15px;
+    border: 0px;
+    outline: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+.container{
+    width: 98%;
+    overflow: auto;
+    padding : 15px;
+    
+
+}
+/* @media screen and (max-width: 700px){
+    header{
+        width: 96%;
+    }
+    header>input[type = "text"]{
+        width: 97%;
+    }
+}
+@media screen and (max-width: 600px){
+    header{
+        width: 95%;
+    }
+    header>input[type = "text"]{
+        width: 95%;
+    }
+} */
+
+header>div>input[type = "text"]::-webkit-input-placeholder{
+    color: rgba(255,255,255,0.75);
+}
+header>div>input[type = "text"]::-moz-input-placeholder{
+    color: rgba(255,255,255,0.75);
+}
+header>div>input[type = "text"]::-ms-input-placeholder{
+    color: rgba(255,255,255,0.75);
+}
+header>div>input[type = "text"]::-webkit-input-placeholder{
+    color: rgba(255,255,255,0.75);
+}
+header>div>button{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 15px;
+    right: 1%;
+    z-index: 2;
+    border-radius: 25px;
+    border: 0px;
+    background: #fff;
+    box-shadow: none;
+    outline: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+button:hover img{
+   transform: rotate(360deg);
+}
+header>div>button>img{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    bottom: 13px;
+    right: 12px;
+    transition: width 1s, height 1s, transform 1s;
+}
+ul{
+    width: 97%;
+    padding-left: 20px;
+}
+li{
+    width: 97%;
+    height: 50px;
+    margin: 0px 0px 10px 0px;
+    /* padding: 17px 0px 0px 15px; */
+    box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.10);
+    border-radius: 5px;
+    background: #fff;
+    transition: display 0.5s;
+}
+li:last-of-type{
+    margin-bottom: 0px;
+}
+div.buttons{
+    height: 31px;
+    width: 60px;
+    float: right;
+    padding-top: 19px;
+    padding-right: 10px;
+    display: flex;
+}
+.image{
+    width: 15px;
+    height: 15px;
+    margin-right: 10%;
+    float: right;
+    cursor: pointer;
+}
+.image:hover{
+    /* position: fixed; */
+    height: 18px;
+    width: 18px;
+    text-shadow: 2px 2px 5px lightgray;
+    
+    transition: width 0.5s;
+}
+.new{
+    width: 15px;
+    transition: width 0.5s;
+}
+h2{
+    font-weight: 400;
+}
+li>input[type='text']{
+    padding: 15px;
+    border: 0px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #444;
+    width: 60%;
+}
+div.icon-wrapper{
+    float: right;
+    /* border: 1px solid; */
+    width: 50px;
+    height: 50px;
+    border-radius: 60%;
+    background: white;
+    box-shadow: 0px 0px 5px lightgrey;
+    margin-right: 9px;
+}
+.icons{
+    transition: font 0.25s;
+    position: absolute;
+    top: 132px;
+    right: 34px;
+    color: #25b99a;
+    font-size: 21px;
+    cursor: pointer;
+}
+div.icon-wrapper:hover .icons{
+    font-size: 25px; 
+}
+.invert{
+     color: #25b99a;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    width: 15px;
+    margin-top: -1px;
+    cursor: pointer;
+    position: relative;
+    right: 20%;
+}
+.invert:before{
+    color: #25b99a;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+div.container2{
+    padding: 15px;
+    width: 98%;
+}
+.update{
+    position: relative;
+    color: rgba(128,128,128,0.5);
+    right:  40%;;
+
+}
+.update:hover{
+    color: rgba(128,128,128,1);
+    cursor: pointer;
+}
+#update-btn{
+    width: 100px;
+      height: 32px;
+    border-radius: 22px;
+    /* box-shadow: none; */
+    border: none;
+    border: 1px solid #E8DAEF;
+    background-color: rgba(255, 255, 255, 0.5);
+    visibility: hidden;
+    transition: visibility 0.25s;
+    position: fixed;
+    outline: none;
+}
+#update-btn:hover{
+    cursor: pointer;
+    background-color:  #fff  ;
+    transition: background-color 1s;
+    opacity: 1; 
+}
+.updt-btn{
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    height: 32px;
+}
